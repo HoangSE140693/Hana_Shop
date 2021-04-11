@@ -25,6 +25,9 @@ import org.apache.log4j.Logger;
 public class AddProductToCartController extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(AddProductToCartController.class.getName());
+    private static final String SUCCESS = "ViewProductController";
+    private static final String ERROR = "error.jsp";
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -37,6 +40,7 @@ public class AddProductToCartController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String url = SUCCESS;
         try {
             HttpSession session = request.getSession();
             Cart cart = (Cart) session.getAttribute("shoppingCart");
@@ -57,9 +61,10 @@ public class AddProductToCartController extends HttpServlet {
             }
             session.setAttribute("shoppingCart", cart);
         } catch (Exception e) {
-           LOGGER.error(e.getMessage());
+            url = ERROR;
+            LOGGER.error(e.getMessage());
         } finally {
-            request.getRequestDispatcher("ViewProductController").forward(request, response);
+            request.getRequestDispatcher(url).forward(request, response);
         }
     }
 
