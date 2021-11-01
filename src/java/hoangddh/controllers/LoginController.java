@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import hoangddh.dtos.User;
+import hoangddh.utils.Encrypt;
 import org.apache.log4j.Logger;
 
 /**
@@ -42,8 +43,10 @@ public class LoginController extends HttpServlet {
         try {
             String userID = request.getParameter("txtUsername");
             String password = request.getParameter("txtPassword");
+            String sha256Password = Encrypt.toHexString(password);
+            System.out.println(sha256Password);
             UserDAO dao = new UserDAO();
-            User user = dao.checkLogin(userID, password);
+            User user = dao.checkLogin(userID, sha256Password);
             if (user!=null) {
                 url = SUCCESS;
                 HttpSession session = request.getSession();
