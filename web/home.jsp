@@ -13,8 +13,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> HanaShop</strong></h1>
-                        <p class="m-b-40">We will bring you the best food and great services.</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Handmade World</strong></h1>
+                        <p class="m-b-40">We will bring you the best handmade products.</p>
                         <p><a class="btn hvr-hover" href="MainController?action=viewProduct">Order Now</a></p>
                     </div>
                 </div>
@@ -25,8 +25,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Hana Shop</strong></h1>
-                        <p class="m-b-40">We will bring you the best food and great services.</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Handmade World</strong></h1>
+                        <p class="m-b-40">We will bring you the best handmade.</p>
                         <p><a class="btn hvr-hover" href="MainController?action=viewProduct">Order Now</a></p>
                     </div>
                 </div>
@@ -37,8 +37,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Hana shop</strong></h1>
-                        <p class="m-b-40">We will bring you the best food and great services.</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> Handmade World</strong></h1>
+                        <p class="m-b-40">We will bring you the best handmade.</p>
                         <p><a class="btn hvr-hover" href="MainController?action=viewProduct">Order Now</a></p>
                     </div>
                 </div>
