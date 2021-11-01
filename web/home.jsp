@@ -9,7 +9,7 @@
 <div id="slides-shop" class="cover-slides">
     <ul class="slides-container">
         <li class="text-center">
-            <img src="https://burgerking.vn/media/catalog/product/cache/3/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_burger_bo_size_lon_2.jpg" alt="">
+            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFuZG1hZGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -21,7 +21,7 @@
             </div>
         </li>
         <li class="text-center">
-            <img src="https://burgerking.vn/media/catalog/product/cache/3/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_255.jpg" alt="">
+            <img src="https://www.erco.com/images/wallpaper-handmade-exhibition-7012/eur-erco-wallpaper-handmade-exhibition-intro-5-30.jpg" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -33,7 +33,7 @@
             </div>
         </li>
         <li class="text-center">
-            <img src="https://burgerking.vn/media/catalog/product/cache/3/small_image/316x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_com_bo_sot_bbq.jpg" alt="">
+            <img src="https://c1.wallpaperflare.com/preview/969/413/282/pot-pottery-handmade-crafts.jpg" alt="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">

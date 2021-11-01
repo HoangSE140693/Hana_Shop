@@ -11,7 +11,7 @@
         body {
             font-family: 'Varela Round', sans-serif;
         }
-        .modal-confirm {		
+        .modal-confirm {
             color: #434e65;
             width: 525px;
         }
@@ -23,7 +23,7 @@
         }
         .modal-confirm .modal-header {
             background: #e85e6c;
-            border-bottom: none;   
+            border-bottom: none;
             position: relative;
             text-align: center;
             margin: -20px -20px 0;
@@ -37,7 +37,7 @@
         }
         .modal-confirm .form-control, .modal-confirm .btn {
             min-height: 40px;
-            border-radius: 3px; 
+            border-radius: 3px;
         }
         .modal-confirm .close {
             position: absolute;
@@ -51,7 +51,7 @@
             opacity: 0.8;
         }
         .modal-confirm .icon-box {
-            color: #fff;		
+            color: #fff;
             width: 95px;
             height: 95px;
             display: inline-block;
@@ -208,7 +208,32 @@
             </div>
             <c:if test="${sessionScope.shoppingCart.getTotal()!=0}">
                 <div class="row my-5">
-                    <div class="col-lg-8 col-sm-12"></div>
+                    <div class="col-lg-8 col-sm-12">
+                        <div>
+                            <div>
+                                <h3 style="font-weight: bold">Enter Information Before Checkout</h3>
+                            </div>
+                            <form id="myForm" action="MainController?action=checkOut" method="POST">
+                                <div class="form-group">
+                                    <label for="Name">Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Address">Address</label>
+                                    <input type="text" name="address" class="form-control" placeholder="Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Phone">Phone</label>
+                                    <input type="tel" name="phone" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Check Out</button>
+                            </form>
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-sm-12"> 
                         <div class="order-box">
                             <h3>Order summary</h3>
@@ -227,9 +252,16 @@
                             </div>
                             <hr>
                         </div>
+                        <div>
+                            <div id="paypal-button-container"></div>
+                        </div>
                     </div> 
-                    <div class="col-12 d-flex shopping-box"><a href="MainController?action=checkOut"
-                                                               class="ml-auto btn hvr-hover">Check out</a> </div>
+
+
+                    <!--                    <div id="submitForm" class="col-12 d-flex shopping-box"><a href="MainController?action=checkOut"
+                                                                                                   class="ml-auto btn hvr-hover">Check Out</a> </div>-->
+
+
                 </div>
                 <a class="ml-auto btn hvr-hover" href="MainController?action=viewProduct"><i class="fas fa-long-arrow-alt-left"></i> Back to shopping</a>
             </c:if>
@@ -237,4 +269,80 @@
     </c:if>
 </div>
 <%@include file="footer.jsp" %>
+
+<script
+    src="https://www.paypal.com/sdk/js?client-id=AaJXqPCjyL6tQ6B7mLmjG-Ajgi-_XfL7G1QU0aJAIVX9hU8lMJvtyh2YVAYpZYybkmfLRJhfB2Mppcir"
+    >
+        // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
+</script>
+
+<script>
+    $("#myForm").validate({
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            address: "required",
+            phone: {
+                required: true,
+                maxlength: 10,
+                number: true
+            }
+        },
+
+        messages: {
+            name: "Please enter your full name",
+            email: {
+                required: "Please enter your email",
+                email: "Please enter a valid email address!"
+            },
+            address: "Please enter your address",
+            phone: {
+                required: "Please provide a phone number",
+                maxlength: "Your phone nummer max length is 10 numbers",
+                number: "Please enter number"
+            },
+        },
+
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+
+//    $(document).ready(function () {
+//        $("#submitForm").click(function () {
+//            $("#myForm").submit(); // Submit the form
+//        });
+//    });
+</script>
+
+<script>
+    paypal
+            .Buttons({
+                createOrder: function (data, actions) {
+                    // This function sets up the details of the transaction, including the amount and line item details.
+                    return actions.order.create({
+                        purchase_units: [
+                            {
+                                amount: {
+                                    value: '${sessionScope.shoppingCart.getTotal()}',
+                                },
+                            },
+                        ],
+                    });
+                },
+                onApprove: function (data, actions) {
+                    // This function captures the funds from the transaction.
+                    return actions.order.capture().then(function (details) {
+                        // This function shows a transaction success message to your buyer.
+                        alert('Transaction completed by ' + details.payer.name.given_name);
+                        window.location.replace("./MainController?action=checkOut");
+                    });
+                },
+            })
+            .render('#paypal-button-container');
+    //This function displays Smart Payment Buttons on your web page.
+</script>
 
