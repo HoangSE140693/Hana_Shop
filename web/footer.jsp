@@ -19,17 +19,9 @@
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
                     <div class="footer-top-box">
-                        <h3>Social Media</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <ul>
-                            <li><i class="fab fa-facebook" aria-hidden="true"></i></li>
-                            <li><i class="fab fa-twitter" aria-hidden="true"></i></li>
-                            <li><i class="fab fa-linkedin" aria-hidden="true"></i></li>
-                            <li><i class="fab fa-google-plus" aria-hidden="true"></i></li>
-                            <li><i class="fa fa-rss" aria-hidden="true"></i></li>
-                            <li><i class="fab fa-pinterest-p" aria-hidden="true"></i></li>
-                            <li><i class="fab fa-whatsapp" aria-hidden="true"></i></li>
-                        </ul>
+                        <h3>Contact</h3>
+                        <p>General Policy and Regulations Operation Policy Contact Information privacy policy</p>
+                        <img src="images/contact.png"/>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12 col-sm-12">
@@ -41,12 +33,16 @@
                                     Street Wichita,<br> KS 67213 </p>
                             </li>
                             <li>
-                                <p><i class="fas fa-phone-square"></i>Phone: +1-888 705
+                                <p><i class="fas fa-phone-square"></i>Phone: 1900-1234
                                     770</p>
                             </li>
                             <li>
                                 <p><i class="fas fa-envelope"></i>Email: contactinfo@gmail.com</p>
                             </li>
+                            <li>
+                                <a href="https://www.facebook.com/thuthuyflowers"><i class="fab fa-facebook"></i>https://www.facebook.com/thuthuyflowers</a>
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -55,7 +51,7 @@
         </div>
     </div>
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2018 HanaShop Design By : Diep Dang Huy Hoang</p>
+        <p class="footer-company">All Rights Reserved. &copy; 2021 HanaShop Design By : Diep Dang Huy Hoang</p>
     </div>
 </footer>
 
