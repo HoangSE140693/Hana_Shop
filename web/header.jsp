@@ -95,12 +95,14 @@
                                 <a class="dropdown-item" href="${Logout}">Logout</a>
                             </div>
                         </c:if>
+                        
                     </div>
                     <!-- End Atribute Navigation -->
+                   
                 </div>
-
-
                 <!-- End Side Menu -->
+                <img src="images/contact.png" style="height: 80px;width: 150px; cursor: pointer;"/>
             </nav>
+            
             <!-- End Navigation -->
         </header>

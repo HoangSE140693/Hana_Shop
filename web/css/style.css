@@ -395,7 +395,7 @@ ul.cart-list > li.total > .btn{
     }
 }
 nav.navbar .navbar-brand img.logo{
-    width: 80px;
+    width: 140px;
 }
 @media (max-width: 992px) {
     /* Navbar General ------*/
@@ -405,7 +405,7 @@ nav.navbar .navbar-brand img.logo{
         top: -2px;
     }
     nav.navbar .navbar-brand img.logo{
-        width: 80px;
+        width: 140px;
     }
     .attr-nav > ul > li > a{
         padding: 16px 15px 15px;
