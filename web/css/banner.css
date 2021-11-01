@@ -1,0 +1,19 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Nov 1, 2021, 5:54:04 PM
+    Author     : ACER
+*/
+
+.bannerScale{
+    width: 100%;
+    position: fixed;
+    top: 340px;
+}
+
+.error {
+    color: red;
+}
+

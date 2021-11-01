@@ -37,9 +37,15 @@
 
 <!-- Start Shop Page  -->
 <div class="shop-box-inner">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-right">
+            <div class="col-xl-2 col-lg-2 col-sm-12 col-xs-12 sidebar-shop-right">
+                <div class="bannerScale">
+                    <a href="#" title="Banenr Title">
+                        <image src="./images/bannerFootball.png" style="width: 200px; height: 500px" alt="Banner Name"/>           
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-sm-12 col-xs-12 sidebar-shop-right">
                 <div class="product-categorie-box">
                     <c:if test="${sessionScope.ROLE eq 'admin'}">
                         <div class="form-control" style="margin-bottom: 20px;border-block-color: white;">
@@ -116,7 +122,7 @@
                 </div>
 
             </div>
-            <div class="col-xl-9 col-lg-9 col-sm-12 col-xs-12 shop-content-left">
+            <div class="col-xl-6 col-lg-6 col-sm-12 col-xs-12 shop-content-left">
                 <div class="right-product-box">
                     <div class="product-categorie-box">
                         <div class="tab-content">
@@ -376,8 +382,26 @@
                         </ul>
                 </c:if>
             </div>
+            <div class="col-xl-2 col-lg-2 col-sm-12 col-xs-12 sidebar-shop-right">
+                <div class="bannerScale">
+                    <a href="#" title="Banenr Title">
+                        <image src="./images/bannerFootball.png" style="width: 200px; height: 500px" alt="Banner Name"/>          
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <%@include file="footer.jsp" %>
+
+<script type="text/javascript">
+    $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop >= 100)
+            $('.bannerScale').css('top', '120px');
+        else
+            $('.bannerScale').css('top', '340px');
+    });
+</script>
+
+
