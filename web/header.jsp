@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Site Metas -->
-        <title>Hana Shop</title>
+        <title>Handmade World</title>
         <meta name="keywords" content="">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -47,7 +47,7 @@
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                             <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt="" style="width: 140px"></a>
+                        <a class="navbar-brand" href="home.jsp"><img src="images/logoHandmade.png" class="logo" alt=""></a>
                     </div>
                     <!-- End Header Navigation -->
 

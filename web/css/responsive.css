@@ -256,6 +256,11 @@
     .footer-link{
         margin-bottom: 30px;
     }
+    .filter-button-group button{
+         font-size: 14px;
+         padding: 5px 18px;
+		 margin-bottom: 3px;
+    }
     nav.navbar.bootsnav ul.nav li.dropdown ul.dropdown-menu{
         position: initial !important;
         top: 0px;
