@@ -219,10 +219,6 @@
                                     <input type="text" name="name" class="form-control" placeholder="Full Name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="Email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
-                                </div>
-                                <div class="form-group">
                                     <label for="Address">Address</label>
                                     <input type="text" name="address" class="form-control" placeholder="Address">
                                 </div>
@@ -256,11 +252,6 @@
                             <div id="paypal-button-container"></div>
                         </div>
                     </div> 
-
-
-                    <!--                    <div id="submitForm" class="col-12 d-flex shopping-box"><a href="MainController?action=checkOut"
-                                                                                                   class="ml-auto btn hvr-hover">Check Out</a> </div>-->
-
 
                 </div>
                 <a class="ml-auto btn hvr-hover" href="MainController?action=viewProduct"><i class="fas fa-long-arrow-alt-left"></i> Back to shopping</a>
