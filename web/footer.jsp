@@ -40,9 +40,12 @@
                                 <p><i class="fas fa-envelope"></i>Email: contactinfo@gmail.com</p>
                             </li>
                             <li>
-                                <a href="https://www.facebook.com/thuthuyflowers"><i class="fab fa-facebook"></i>https://www.facebook.com/thuthuyflowers</a>
+                                <a href="https://www.facebook.com/thuthuyflowers"> 
+                                    <p>
+                                        <i class="fab fa-facebook">   https://www.facebook.com/thuthuyflowers</i>
+                                    </p>
+                                </a>
                             </li>
-                            
                         </ul>
                     </div>
                 </div>

@@ -57,6 +57,7 @@ public class ViewProductController extends HttpServlet {
             session.setAttribute("listCate", listCate);
         } catch (Exception e) {
             LOGGER.error(e.getMessage());
+            e.printStackTrace();
         } finally {
             request.getRequestDispatcher("productManagement.jsp").forward(request, response);
         }
