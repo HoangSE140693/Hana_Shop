@@ -198,7 +198,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </c:forEach>
                             </tbody>
                         </table>
@@ -213,7 +212,7 @@
                             <div>
                                 <h3 style="font-weight: bold">Enter Information Before Checkout</h3>
                             </div>
-                            <form id="myForm" action="MainController?action=checkOut" method="POST">
+                            <form id="myForm" onsubmit="return validate()" action="MainController?action=checkOut" method="POST">
                                 <div class="form-group">
                                     <label for="Name">Name</label>
                                     <input type="text" name="name" class="form-control" placeholder="Full Name">
@@ -226,19 +225,22 @@
                                     <label for="Phone">Phone</label>
                                     <input type="tel" name="phone" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number">
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioPayAfter" id="flexRadioDefault1" checked>
-                                    <label class="form-check-label" for="flexRadioPayAfter">
-                                        Pay after delivery
-                                    </label>
+                                <div class="form-group">
+                                    <label ><b>Select a payment method</b></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="flexRadioPayAfter" id="flexRadioDefault1" checked value="normal">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Pay after delivery
+                                        </label>
+                                    </div>
+                                    <div class="form-check" data-toggle="modal">
+                                        <input class="form-check-input" type="radio" name="flexRadioPayAfter" id="flexRadioDefault2" value="paypal">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Credit Card Payment
+                                        </label>
+                                    </div>
                                 </div>
-                                <div id="#showPaypal" class="form-check" data-toggle="modal">
-                                    <input class="form-check-input" type="radio" name="flexRadioPaypal" id="flexRadioDefault2">
-                                    <label class="form-check-label" for="flexRadioPaypal">
-                                        Credit Card Payment
-                                    </label>
-                                </div>
-                                <button type="submit" class="btn btn-primary">Check Out</button>
+                                <button type="submit" id=order" class="btn btn-primary">Order</button>
                             </form>
                         </div>
                     </div>
@@ -260,9 +262,7 @@
                             </div>
                             <hr>
                         </div>
-                        <div id="showPaypal">
-                            <div id="paypal-button-container"></div>
-                        </div>
+
                     </div> 
 
                 </div>
@@ -278,7 +278,20 @@
     >
         // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
 </script>
-
+<div id="myPaypal" class="modal fade">
+    <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body text-center">
+                <div id="showPaypal">
+                    <div id="paypal-button-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
 <script>
 
 </script>
@@ -297,7 +310,6 @@
                 number: true
             }
         },
-
         messages: {
             name: "Please enter your full name",
             email: {
@@ -310,12 +322,18 @@
                 maxlength: "Your phone nummer max length is 10 numbers",
                 number: "Please enter number"
             },
-        },
-
-        submitHandler: function (form) {
-            form.submit();
         }
     });
+
+    function validate() {
+        if (document.getElementById('flexRadioDefault2').checked) {
+            $(document).ready(function () {
+                $("#myPaypal").modal('show');
+            });
+            return false;
+        } 
+        return true;
+    }
 
 //    $(document).ready(function () {
 //        $("#submitForm").click(function () {
@@ -344,7 +362,7 @@
                     return actions.order.capture().then(function (details) {
                         // This function shows a transaction success message to your buyer.
                         alert('Transaction completed by ' + details.payer.name.given_name);
-                        window.location.replace("./MainController?action=checkOut");
+                        window.location.replace("./MainController?action=checkOut&flexRadioPayAfter=paypal");
                     });
                 },
             })

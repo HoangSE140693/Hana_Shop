@@ -15,6 +15,23 @@ public class OrderDTO implements Serializable {
 
     private String orderID, customerID, dateOrder;
     private float total;
+    private boolean status;
+
+    public OrderDTO(String orderID, String customerID, String dateOrder, float total, boolean status) {
+        this.orderID = orderID;
+        this.customerID = customerID;
+        this.dateOrder = dateOrder;
+        this.total = total;
+        this.status = status;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 
     public String getOrderID() {
         return orderID;

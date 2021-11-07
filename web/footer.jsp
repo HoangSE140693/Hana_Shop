@@ -1,4 +1,4 @@
-<div style="position: fixed; right: 120px; bottom: 70px; z-index: 1000">
+<div style="position: fixed; right: 90px; bottom: 40px; z-index: 1000">
     <a href="https://www.facebook.com/thuthuyflowers">
         <image src="./images/chat_box.png" alt="" style="width: 64px; height: 64px"/>
     </a>

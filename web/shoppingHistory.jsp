@@ -54,7 +54,7 @@
                         </table>
                         <hr>
                         <div>
-                            <h2>Information</h2>
+                            <h2><b>Receiver's information</b></h2>
                             <label style="font-weight: bold">Address: </label>
                             <span> 70/1/23/5 Phu Chau Address, Dist 5, HCMC</span>
                             <br>
@@ -63,6 +63,7 @@
                             <br>
                             <label style="font-weight: bold">Name: </label>
                             <span> Diep Dang Huy Hoang </span>
+                            
                         </div>
                     </div>
                 </div>
@@ -119,6 +120,7 @@
                                                     <th>No</th>
                                                     <th>Date order</th>
                                                     <th>Total</th>
+                                                    <th>Status</th>
                                                     <th>Detail</th>
                                                 </tr>
                                             </thead>
@@ -128,6 +130,12 @@
                                                         <td>${counter.count}</td>
                                                         <td>${dto.dateOrder}</td>
                                                         <td>$ ${dto.total}</td>
+                                                        <c:if test="${dto.status == true}">
+                                                            <td style="color: green">paid</td>
+                                                        </c:if>
+                                                        <c:if test="${dto.status == false}">
+                                                            <td style="color: red">unpaid</td>
+                                                        </c:if>
                                                         <td>
                                                             <a class="btn btn-outline-success" href="MainController?action=viewDetail&orderID=${dto.orderID}">
                                                                 Show Detail

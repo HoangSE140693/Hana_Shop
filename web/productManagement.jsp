@@ -20,23 +20,53 @@
 <!-- End Top Search -->
 
 <!-- Start All Title Box -->
-<div style="display: flex">
+<!--<div style="display: flex">
     <image src="./images/sale_tet.png" alt="" style="height: 250px; margin: 0 auto; z-index: 100"/>
-</div>
-<div class="all-title-box" style="height: 60px; padding: 5px">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Shop</h2>
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Shop</li>
-                </ul>
+</div>-->
+<script>
+    $('.carousel').carousel({
+        interval: 2000
+    })
+</script>
+<div class="row">
+    <div class="col-1">
+
+    </div>
+    <div class="col-10">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item  active">
+                    <img class="d-block w-100" src="./images/poster-sale.jpg" alt="Third slide"style="height:400px;">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/sale_tet.png" alt="First slide" style="height: 400px;">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./images/Sale_Handmade.PNG" alt="Second slide" style="height: 400px;">
+                </div>
+
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+           
         </div>
     </div>
+    <div class="col-1">
+
+    </div>
 </div>
-<!-- End All Title Box -->
 
 <!-- Start Shop Page  -->
 <div class="shop-box-inner">

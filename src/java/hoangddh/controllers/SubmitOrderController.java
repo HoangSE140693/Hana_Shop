@@ -50,8 +50,15 @@ public class SubmitOrderController extends HttpServlet {
             OrderDAO orderDAO = new OrderDAO();
             LocalDateTime dateTime = LocalDateTime.now();
             String dateCreate = dateTime.toString().split("T")[0];
-            OrderDTO orderDTO = new OrderDTO(orderDAO.getLastOrder() + 1 + "", cart.getCustomerID(), dateCreate, cart.getTotal());
-
+           
+            String payment=request.getParameter("flexRadioPayAfter");
+            boolean status=false;
+            if(payment.equals("paypal")){
+                status=true;
+            }
+            OrderDTO orderDTO = new OrderDTO(orderDAO.getLastOrder() + 1 + ""
+                    , cart.getCustomerID(), dateCreate, cart.getTotal(),status);
+            
             boolean isAvailable = true;
             for (ProductInCartDTO dto : cart.getShoppingCart().values()) {
                 if (orderDAO.checkQuantityProduct(dto.getProduct().getProductID()) == 0

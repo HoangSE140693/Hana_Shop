@@ -78,14 +78,15 @@ public class OrderDAO implements Serializable {
     public boolean insertNewOrder(OrderDTO odto) throws Exception {
         boolean check = false;
         try {
-            String sql = "Insert into tblOrders(OrderID, CustomerID, DateOrder,TotalMoney)"
-                    + " values(?,?,?,?)";
+            String sql = "Insert into tblOrders(OrderID, CustomerID, DateOrder,TotalMoney,Status)"
+                    + " values(?,?,?,?,?)";
             connection = MyConnection.getMyConnection();
             ps = connection.prepareStatement(sql);
             ps.setString(1, odto.getOrderID());
             ps.setString(2, odto.getCustomerID());
             ps.setString(3, odto.getDateOrder());
             ps.setFloat(4, odto.getTotal());
+            ps.setBoolean(5, odto.isStatus());
             check = ps.executeUpdate() > 0;
         } finally {
             closeConnection();
@@ -115,7 +116,7 @@ public class OrderDAO implements Serializable {
     public List<OrderDTO> getListOrderByUserID(String userID) throws Exception {
         List<OrderDTO> result = null;
         try {
-            String sql = "select OrderID,DateOrder,TotalMoney from tblOrders where CustomerID = ? order by DateOrder DESC";
+            String sql = "select OrderID,DateOrder,TotalMoney,Status from tblOrders where CustomerID = ? order by DateOrder DESC";
             connection = MyConnection.getMyConnection();
             ps = connection.prepareStatement(sql);
             ps.setString(1, userID);
@@ -125,7 +126,8 @@ public class OrderDAO implements Serializable {
                 String orderID = rs.getString("OrderID");
                 String dateOrder = rs.getString("DateOrder");
                 float total = rs.getFloat("TotalMoney");
-                result.add(new OrderDTO(orderID, userID, dateOrder, total));
+                boolean status=rs.getBoolean("Status");
+                result.add(new OrderDTO(orderID, userID, dateOrder, total,status));
             }
         } finally {
             closeConnection();
