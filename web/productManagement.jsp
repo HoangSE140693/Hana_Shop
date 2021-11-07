@@ -20,7 +20,10 @@
 <!-- End Top Search -->
 
 <!-- Start All Title Box -->
-<div class="all-title-box">
+<div style="display: flex">
+    <image src="./images/sale_tet.png" alt="" style="height: 250px; margin: 0 auto; z-index: 100"/>
+</div>
+<div class="all-title-box" style="height: 60px; padding: 5px">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

@@ -52,6 +52,18 @@
                                 </c:forEach>
                             </tbody>
                         </table>
+                        <hr>
+                        <div>
+                            <h2>Information</h2>
+                            <label style="font-weight: bold">Address: </label>
+                            <span> 70/1/23/5 Phu Chau Address, Dist 5, HCMC</span>
+                            <br>
+                            <label style="font-weight: bold">Phone: </label>
+                            <span> 0937917091 </span>
+                            <br>
+                            <label style="font-weight: bold">Name: </label>
+                            <span> Diep Dang Huy Hoang </span>
+                        </div>
                     </div>
                 </div>
             </div>

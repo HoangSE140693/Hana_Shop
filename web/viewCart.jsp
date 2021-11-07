@@ -226,6 +226,18 @@
                                     <label for="Phone">Phone</label>
                                     <input type="tel" name="phone" class="form-control" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number">
                                 </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioPayAfter" id="flexRadioDefault1" checked>
+                                    <label class="form-check-label" for="flexRadioPayAfter">
+                                        Pay after delivery
+                                    </label>
+                                </div>
+                                <div id="#showPaypal" class="form-check" data-toggle="modal">
+                                    <input class="form-check-input" type="radio" name="flexRadioPaypal" id="flexRadioDefault2">
+                                    <label class="form-check-label" for="flexRadioPaypal">
+                                        Credit Card Payment
+                                    </label>
+                                </div>
                                 <button type="submit" class="btn btn-primary">Check Out</button>
                             </form>
                         </div>
@@ -248,7 +260,7 @@
                             </div>
                             <hr>
                         </div>
-                        <div>
+                        <div id="showPaypal">
                             <div id="paypal-button-container"></div>
                         </div>
                     </div> 
@@ -267,6 +279,9 @@
         // Required. Replace YOUR_CLIENT_ID with your sandbox client ID.
 </script>
 
+<script>
+
+</script>
 <script>
     $("#myForm").validate({
         rules: {
