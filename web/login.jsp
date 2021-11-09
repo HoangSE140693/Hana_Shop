@@ -61,6 +61,10 @@
                                 </c:if>
                             </div>
                         </form>
+                        <div class="row">
+                            <div class="col-8 text-white text-sm-left"><span>Do you have an Account?</span></div>
+                            <div class="col-4 float-right"><a href="signUp.jsp">Sign up</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
