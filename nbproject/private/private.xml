@@ -2,16 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/src/java/hoangddh/controllers/ViewOrderHistoryController.java</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/web/header.jsp</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/src/java/hoangddh/controllers/SubmitOrderController.java</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/src/java/hoangddh/controllers/ViewProductController.java</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/web/viewCart.jsp</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/web/productManagement.jsp</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/src/java/hoangddh/daos/OrderDAO.java</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/src/java/hoangddh/controllers/LoginController.java</file>
-            <file>file:/D:/FPT-Course/Spring%202021/LabJavaWeb/J3.L.P0013/web/shoppingHistory.jsp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
